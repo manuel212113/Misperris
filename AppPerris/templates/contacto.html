@@ -1,0 +1,107 @@
+{% load static %}
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/formulario.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+
+
+
+  <body>
+
+    <header style="background-color: #6DCCAA;">
+        <div id="menu" style="background-color: #6DCCAA;">
+            <img src="static/img/logo.png" alt="logo mis perris">
+            <a href="index.html">inicio</a>
+            <a href="#">Quienes somos</a>
+            <a href="#">Adopción</a>
+            <a href="contacto.html" >contactanos</a>
+        </div>
+      </header>
+    <!-- START FORM BODY -->
+    <div id="container">
+      <header>
+        <h1>MIS PERRIS</h1>
+        <h1>FORMULARIO CONTACTO</h1>
+      </header>
+      {% block content %}
+      <form class="formulario" method="POST" >
+        {% csrf_token %}
+
+        <fieldset>
+          <h3>Los campos marcados con  * son obligatorios</h3>
+          <br/>
+
+          <div id="part-1">
+            <h2>Información Personal (requerido)</h2>
+            <label for="email">Email</label>
+            <input type="email"placeholder="Ej:usuario@dominio.com" name="{{form.email}}" class="correo" id="email" required>
+            <br/>
+            <label for="rut">RUT</label>
+            <input type="text" name="{{form.rut}}" class="rut" id="rut" class="rut" placeholder="Ej:19310414-5" pattern="\d{7,8}-[0-9kK]" required> 
+            <br/>
+            <label for="nacimiento">Fecha Nacimiento</label>
+            <input type="date" name="{{form.nacimiento}}" min="1960-01-01" class="nacimiento"  id="nacimiento" required>
+            <br/>
+            <label for="telefono">Telefono</label>
+            <input type="number"  placeholder="Ej:955532882"  name="{{form.telefono}}"  class="telefono"  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+             min="1"  maxlength="9"   required  >
+            <br/>
+            
+            <label for="regiones">Region</label>
+            <br/>
+            <select  id="regiones" name="{{form.region}}" class="region" required  >
+              
+            </select>
+
+            <label for="comunas">Comuna </label>
+            <br/>
+            <select  id="comunas" name="{{form.comuna}}" class="comuna"  onchange="document.getElementById('submitButton').disabled=false;" required >
+              
+            </select>
+
+            <label for="country">Selecciona el tipo de Vivienda </label>
+            <br/>
+            <select  id="country" name="{{form.tipo_vivienda}}" class="vivienda" required>
+                <option value="1" selected="selected">Casa con patio grande</option>
+                <option value="2" >Casa con patio pequeño</option>
+                <option value="3" >Casa sin patio</option>
+                <option value="4" >Departamento</option>
+
+              
+            </select>
+
+          </div>
+         
+          <br/><br/>
+          <button  id="submitButton"   >Enviar</button>
+        </fieldset>
+      </form>
+      {% endblock %}
+
+    </div>
+    <!-- END FORM BODY -->
+  </body>
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+  <script src="static/js/Regiones.js"></script>
+
+
+  <script>
+  document.getElementById('submitButton').disabled=true;
+  jQuery('#comunas').change(function () {
+
+  var comunas = document.getElementById('comunas');
+  if (comunas=="Seleccione Comuna"){
+    document.getElementById('submitButton').disabled=true;
+  }
+  });
+
+  </script>
+  </script>
+</html>

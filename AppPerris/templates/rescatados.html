@@ -1,0 +1,91 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/rescatados.css'%}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+  <!-- Latest compiled and minified CSS -->
+
+  <title>Adoptacion</title>
+</head>
+<body>
+   
+    <header>
+        <div id="menu">
+            <img src="static/img/logo.png" alt="logo mis perris">
+            <a href="index.html">inicio</a>
+            <a href="#">Quienes somos</a>
+            <a href="#">Adopción</a>
+            <a href="contacto.html" >contactanos</a>
+        </div>
+    </header>
+  
+
+ <section id=bannerAdopcion>
+       <img src="https://static.vecteezy.com/system/resources/previews/001/200/028/non_2x/dog-png.png"/>
+       <h1 style=" color: white; font-size: 50px; width: 700px; height: 80px; margin-left: 600px; margin-top: 100px; position: absolute; top: 20px;">Panel de Adopcion</h1>
+       <h2 style=" color: white; font-size: 25px; width: 700px; height: 80px; margin-left: 600px; margin-top: 170px; position: absolute; top: 20px;">Estos son nuestros perros disponibles para adoptar</h2>
+       <a onclick="play()" style=" margin-left: 630px; margin-top: 95px; font-size: 65px; color: white; position: absolute; top: 20px;" href="#" class="fa fa-paw"></a>
+  </section>
+
+    
+<section id="tarjetas">
+    {% for row in lista %}
+    <div class="container">
+        <div class="container-cards">
+            <div class="container-cards-surface container-cards-front">
+                <div class="container-cards-front-image">
+                    <img src="{{row.foto}}" alt="{{ row.nombre }} imagen">
+                </div>
+                <div class="container-cards-front-content">
+                  <h2>{{ row.nombre }} - {{ row.raza }} </h2>
+                  <p>{{ row.descripcion }} </p>
+              </div>
+                <div class="container-cards-front-label">{{ row.estado }} </div>
+                <div class="container-cards-front-button">
+                  <button class="flip-btn">Adoptar a {{ row.nombre }} </button>
+              </div>
+            </div>
+            <div class="container-cards-surface container-cards-back">
+                <div class="container-cards-back-content">
+                  <h2>{{ row.nombre }}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+   
+          {% endfor %}
+
+          
+          
+        
+      </section>
+ 
+
+
+              </div>
+            </body>
+            <script>
+              function play() {
+                var audio = document.getElementById("audio");
+                audio.play();
+              }
+            </script>
+            <audio id="audio" src="http://sonidosmp3gratis.com/sounds/ANIMALDOGDRINKING_6003_56.mp3"></audio>
+
+<!-- Latest compiled and minified JavaScript -->
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

@@ -1,0 +1,519 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+/*menu superior*/
+
+
+#menu{/*Este estilo se aplica solo al div menu*/
+    display: flex;/*Indicamos que usaremos flex para controlar la disposicion de los elementos*/
+    align-items: center;/*Posicionamos los elementos al centro (verticalmente)*/
+    background-color: #85D4B7;/*Cambiamos el color de fondo del contenedor (div)*/
+    height: 90px;/*Establecemos el largo del contenedor en 90 pixeles*/
+}
+
+#menu a{/*Este estilo se aplica a los links (a) dentro del div menu (#menu)*/
+    color: white;/*Color de la fuente*/
+    text-decoration: none;/*Quito el subrayado del link (a)*/
+    font-size: 1.3em;/*cambio el tamaÃ±o de la fuente al 130% del tamaÃ±o normal*/
+    margin: 20px;/*margen (espacio) hacia todas direcciones*/
+}
+
+#menu img{/*Esto se aplica a todoas las imagenes dentro del div #menu (solo tenemos la imagen logo)*/
+    margin-left: 10px;/*Margen (espacio) hacia la izquierda*/
+    margin-right: 400px;/*Margen (espacio) hacia la derecha*/
+}
+
+header{/*Esto se aplica a todo el header... menu, perro y info (telefono, etc)*/
+    background-color: #6DCCAA;/*Color de fondo*/
+    margin-bottom: 60px;
+}
+
+#formulario{
+    position: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url("../img/fondo_formulario.jpg");
+    background-size: cover;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#tema {
+    background: orange;
+    text-align: left;
+    padding: 10px 5px;
+    text-align: center;
+    position: fixed;
+    top: 25px;
+    left: 5px;
+    font-size: 15px;
+    border-radius: .5%;
+}
+
+audio {
+    background: orange;
+    height: 50px;
+    width: 100%;
+}
+
+
+
+#container {
+    background: #FFF;
+    width: 70%;
+    margin: 25px auto;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+header {
+    background: #3DD8AD;
+    text-align: center;
+    padding: 1%;
+    color: white;
+}
+
+form {
+    margin: 5%;
+    width: 70%;
+}
+
+fieldset {
+    border: 0px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+#country,
+#regiones,
+#comunas,
+input[type="email"],
+input[type="password"],
+textarea {
+    border: 1px solid #029c66;
+    display: block;
+    margin: 10px auto;
+    padding: 2%;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+input[type="radio"] {
+    margin-top: 1.5%;
+}
+
+#submitButton {
+    background-color: #3DD8AD;
+    padding: 10px;
+    border: 2px solid black;
+    width: 120px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    float: center;
+}
+
+#submitButton:hover {
+    filter: brightness(115%);
+}
+
+#resetButton {
+    background: #e24f2b;
+    padding: 15px 10px;
+    color: white;
+    float: right;
+    cursor: pointer;
+}
+
+#resetButton:hover {
+    filter: brightness(115%);
+}
+
+#part-1 label:after {
+    content: " *";
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#part-2 label:after {
+    content: " *";
+    color: red;
+}
+
+textarea {
+    resize: none;
+}
+
+/*Media Query */
+
+
+@media all and (min-width:0px) and (max-width:250px){
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    #country,
+    #regiones,
+    #comunas,
+    input[type="email"],
+    input[type="password"],
+    textarea {
+        border: 1px solid #029c66;
+        margin: 10px auto;
+        padding: 2%;
+        width: 100%;
+        font-family: 'Quicksand', sans-serif;
+    }
+       
+        #container {
+            width: 100%;
+            margin-top: 20%;
+        }
+        #tema {
+            width: 100%;
+            left: .5px;
+            top: 0;
+        }
+        #resetButton {
+            float: left;
+        }
+    
+        #menu{
+            height: auto;
+            flex-direction: column;
+    
+            
+            
+    
+        }
+        #menu a{
+            background-color:#6DCCAA ;
+            border-bottom: 1px solid lightgray;
+            border-top: 1px solid lightgray;
+            width: 100%;
+            line-height: 3em;
+            text-align: center;
+    
+        }
+    
+    
+        
+    
+        #menu img{
+            float:left;
+            margin:4px;
+            
+          
+            
+        }
+
+}
+
+@media all and (min-width: 250px) and (max-width: 320px) {
+
+    input[type="text"],
+input[type="date"],
+input[type="number"],
+#country,
+#regiones,
+#comunas,
+input[type="email"],
+input[type="password"],
+textarea {
+    border: 1px solid #029c66;
+    margin: 10px auto;
+    padding: 2%;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+}
+   
+    #container {
+        width: 100%;
+        margin-top: 20%;
+    }
+    #tema {
+        width: 100%;
+        left: .5px;
+        top: 0;
+    }
+    #resetButton {
+        float: left;
+    }
+
+    #menu{
+        height: auto;
+        flex-direction: column;
+
+        
+        
+
+    }
+    #menu a{
+        background-color:#6DCCAA ;
+        border-bottom: 1px solid lightgray;
+        border-top: 1px solid lightgray;
+        width: 100%;
+        line-height: 3em;
+        text-align: center;
+
+    }
+
+
+    
+
+    #menu img{
+        float:left;
+        margin:4px;
+        
+      
+        
+    }
+}
+
+@media all and (min-width: 321px) and (max-width: 480px) {
+
+
+
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    #country,
+    #regiones,
+    #comunas,
+    input[type="email"],
+    input[type="password"],
+    textarea {
+        border: 1px solid #029c66;
+        margin: 10px auto;
+        padding: 2%;
+        width: 130%;
+        font-family: 'Quicksand', sans-serif;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    #container {
+        width: 100%;
+        margin-top: 12%;
+    }
+    #tema {
+        width: 100%;
+        left: .5px;
+        top: 0;
+    }
+    #resetButton {
+        float: left;
+    }
+    #menu{
+        height: auto;
+        flex-direction: column;
+        
+
+    }
+    #menu a{
+        background-color:#6DCCAA ;
+        border-bottom: 1px solid lightgray;
+        border-top: 1px solid lightgray;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        line-height: 3em;
+
+    }
+
+
+    
+
+    #menu img{
+        position:center;
+        margin:10px;
+        
+      
+        
+    }
+}
+
+@media all and (min-width: 481px) and (max-width: 568px) {
+
+    
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    #country,
+    #regiones,
+    #comunas,
+    input[type="email"],
+    input[type="password"],
+    textarea {
+        border: 1px solid #029c66;
+        margin: 10px auto;
+        padding: 2%;
+        width: 130%;
+        font-family: 'Quicksand', sans-serif;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    #container {
+        width: 90%;
+        margin-top: 10%;
+    }
+    #tema {
+        width: 100%;
+        left: .5px;
+        top: 0;
+    }
+    #menu{
+        height: auto;
+        flex-direction: column;
+        
+
+    }
+
+    #menu a{
+        background-color:#6DCCAA ;
+        border-bottom: 1px solid lightgray;
+        border-top: 1px solid lightgray;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        line-height: 3em;
+
+    }
+
+
+    
+
+    #menu img{
+        position:center;
+        margin:10px;
+        
+      
+        
+    }
+}
+
+
+
+@media all and (min-width: 769px) and (max-width: 1200px) {
+
+    h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    #container {
+        width: 90%;
+        margin-top: 7%;
+    }
+    #tema {
+        width: 100%;
+        left: .5px;
+        top: 0;
+    }
+
+    #menu{
+        height: auto;
+        flex-direction: column;
+        
+
+    }
+
+    #menu a{
+        background-color:#6DCCAA ;
+        border-bottom: 1px solid lightgray;
+        border-top: 1px solid lightgray;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        line-height: 3em;
+
+    }
+
+
+    
+
+    #menu img{
+        position:center;
+        margin:10px;
+        
+      
+        
+    }
+
+}
+
+@media all and (min-width: 569px) and (max-width: 768px) {
+    h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    #container {
+        width: 90%;
+        margin-top: 7%;
+    }
+    #tema {
+        width: 100%;
+        left: .5px;
+        top: 0;
+    }
+
+    #menu{
+        height: auto;
+        flex-direction: column;
+        
+
+    }
+
+    #menu a{
+        background-color:#6DCCAA ;
+        border-bottom: 1px solid lightgray;
+        border-top: 1px solid lightgray;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        line-height: 3em;
+
+    }
+
+
+    
+
+    #menu img{
+        position:center;
+        margin:10px;
+        
+      
+        
+    }
+}
+
+
+

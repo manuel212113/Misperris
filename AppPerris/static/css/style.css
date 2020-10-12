@@ -1,0 +1,1498 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#menu{/*Este estilo se aplica solo al div menu*/
+    display: flex;/*Indicamos que usaremos flex para controlar la disposicion de los elementos*/
+    align-items: center;/*Posicionamos los elementos al centro (verticalmente)*/
+    background-color: #85D4B7;/*Cambiamos el color de fondo del contenedor (div)*/
+    height: 90px;/*Establecemos el largo del contenedor en 90 pixeles*/
+}
+
+
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	color: #00c5b9;
+	text-decoration: none;
+}
+
+h1 {
+	color: #FFF;
+	text-align: center;
+	margin-top: 30px;
+	font-weight: 300;
+	font-size: 2.4em;
+}
+
+/** ---------------------------------------
+ * Slider 
+ ----------------------------------------*/
+.container {
+	width: 800px;
+	margin: 40px auto 0;
+}
+
+.slider-wrapper {
+	z-index: 500;
+	position: relative;
+	width: 100%;
+	height: 360px;
+	background: #FFF;
+	border: 5px solid #4b5973;
+	overflow: hidden;
+}
+
+.slider-wrapper li {
+	display: none;
+}
+
+.slider-wrapper .current-slide {
+	display: block;
+}
+
+.slider-shadow {
+	width: 100%;
+	height: 15px;
+	position: relative;
+}
+
+.slider-shadow:after, .slider-shadow:before {
+	content: '';
+	position: absolute;
+	background: #171c24;
+	height: 100%;
+	width: 50%;
+	left: 10px;
+	top: -20px;
+	-webkit-transform: rotate(-4deg);
+	-ms-transform: rotate(-4deg);
+	-o-transform: rotate(-4deg);
+	transform: rotate(-4deg);
+	-webkit-box-shadow: 0 0 15px 8px #171c24;
+	box-shadow: 0 0 15px 8px #171c24;
+}
+
+.slider-shadow:before {
+	right: 10px;
+	left: auto;
+	-webkit-transform: rotate(4deg);
+	-ms-transform: rotate(4deg);
+	-o-transform: rotate(4deg);
+	transform: rotate(4deg);
+}
+
+.slider-wrapper img {
+	position: absolute;
+	max-width: 100%;
+	height: auto;
+	top: 0;
+	left: 0;
+}
+
+/**
+ * ---[Caption] ---------------------- 
+ **/
+.slider-wrapper .caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.65);
+	width: 100%;
+	padding: 10px;
+	color: #FFF;
+	-webkit-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	-o-transform: translateY(100%);
+	transform: translateY(100%);
+	opacity: 0;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.slider-wrapper li:hover .caption {
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
+	opacity: 1;
+}
+
+
+.slider-wrapper h2 {
+	color: #00c5b9;
+	font-size: 2em;
+	font-weight: 400;
+	margin-bottom: 6px;
+}
+
+.slider-wrapper p {
+	font-size: 1.6em;
+	font-weight: 300;
+	line-height: 1.4em;
+}
+
+/**
+ * ---[Botones-Control] ---------------------- 
+ **/
+.control-buttons {
+	margin-top: 15px;
+	text-align: center;
+}
+
+
+
+#gallery{
+    width: 90%;
+}
+
+.control-buttons li {
+	cursor: pointer;
+	display: inline-block;
+	background: #FFF;
+	text-indent: -99999px;
+	height: 12px;
+	width: 12px;
+	margin: 0 6px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.control-buttons li.active {
+	background: #009187;
+}
+
+.authors {
+	text-align: center;
+	color: #7a8699;
+	display: block;
+	font-size: 1.6em;
+	font-weight: 300;
+	margin-top: 80px;
+	font-size: 300;
+}
+
+
+#menu a{/*Este estilo se aplica a los links (a) dentro del div menu (#menu)*/
+    color: white;/*Color de la fuente*/
+    text-decoration: none;/*Quito el subrayado del link (a)*/
+    font-size: 1.3em;/*cambio el tamaÃ±o de la fuente al 130% del tamaÃ±o normal*/
+    margin: 10px;/*margen (espacio) hacia todas direcciones*/
+}
+
+#menu img{/*Esto se aplica a todoas las imagenes dentro del div #menu (solo tenemos la imagen logo)*/
+    margin-left: 40px;/*Margen (espacio) hacia la izquierda*/
+    margin-right: 130px;/*Margen (espacio) hacia la derecha*/
+}
+
+header{/*Esto se aplica a todo el header... menu, perro y info (telefono, etc)*/
+    background-color: #6DCCAA;/*Color de fondo*/
+    margin-bottom: 60px;
+}
+
+
+
+#info{
+    display: flex;
+    align-items: center;
+    height: 200px;
+    color: white;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+#info div{
+    width: 33%;
+    text-align: center;
+}
+#cuerpo{
+    display: flex;
+}
+#izquierda{
+    width: 50%;
+    display: flex;
+    margin-right: 20px;
+    flex-direction: column;
+}
+#derecha{
+    width: 50%;
+    display: flex;
+    margin-left: 20px;
+    flex-direction: column;
+}
+
+.titulo{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.subtitulo{
+    font-size: 1.2em;    
+    color: gray;
+}
+
+.end{
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.rescate-crow{
+    width: 350px;
+}
+.linea{
+    border-top: 3px solid darkgray;
+    width: 60px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.texto{
+    width: 80%;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.boton{
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+    width: 120px;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.boton:hover {
+    background-color: #000000; /* negro */
+    color: white;
+  }
+
+footer{
+    background-color: lightgray;
+}
+
+
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: white;
+    color: #3DD8AD;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin-left: 15px;
+}
+
+.fa-instagram {
+    background: white;
+    color: #3DD8AD;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin-left: 15px;
+}
+
+.fa-google-plus {
+    background: white;
+    color: #3DD8AD;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin-left: 15px;
+}
+
+.fa-envelope {
+    background: white;
+    color: #3DD8AD;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin-left: 15px;
+}
+
+
+#photos {
+    line-height: 0;
+     
+    -webkit-column-count: 3;
+    -webkit-column-gap:   0px;
+    -moz-column-count:    3;
+    -moz-column-gap:      10px;
+    column-count:         3;
+    column-gap:           0px;  
+    background-color: #86d4b7;  
+  }
+
+/*  estilo tarjeta de informacion animales*/
+
+
+  
+  
+  
+  #photos img {
+    /* Just in case there are inline attributes */
+    width: 90% !important;
+    height: auto !important;
+    margin: 5px 5px 5px 5px;
+
+  }
+
+
+
+
+
+  @media all and (min-width:601px) and (max-width:720px){
+
+    #menu{
+        height: auto;
+        flex-direction: column;
+        
+
+    }
+
+    
+         
+
+    .container {
+            padding: 5px;
+            width: 95%;
+            margin: 40px 0 0 0;
+            
+    }
+
+    .container img{
+        width: max-content;
+        height: 120%;
+    }
+
+    
+
+    .slider-wrapper {
+        height: 240px;
+        
+    }
+
+    
+    .caption{
+        height: 40%;
+    }
+
+
+    .caption p{
+        width: 80%;
+        font-size: 15px;
+    }
+
+   
+
+
+    #menu a{
+        background-color:#6DCCAA ;
+        border-bottom: 1px solid lightgray;
+        border-top: 1px solid lightgray;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        line-height: 3em;
+
+    }
+
+
+    
+
+    #menu img{
+        position:center;
+        margin:10px;
+        
+      
+        
+    }
+
+   
+
+
+    #cuerpo {
+        flex-direction: column;
+        
+    }
+
+    
+     #numero{
+        display: none;
+     }
+
+     #descripcion_perris{
+        display: none;
+     }
+
+     #info{
+         height: 100px;
+     }
+
+   
+
+
+    #izquierda{
+
+        width: 96%;
+        margin-right: 60px;
+        padding: 10px;
+    }
+
+    #izquierda img{
+        width: 300px;
+        padding: 10px;
+        margin-left: 46%;
+        height: 170px;
+    }
+
+
+    #izquierda .subtitulo,.linea,.titulo{
+        margin-right: 10px;
+        font-size: 25px;
+    }
+
+
+    #izquierda .subtitulo {
+        font-size: 20px;
+    }
+
+    #izquierda .texto{
+        
+        width: 100%;
+        margin-right: 70px;
+        font-size: 15px;
+    }
+
+    #derecha .subtitulo,.linea,.titulo{
+        margin-right: 10px;
+        font-size: 25px;
+    }
+
+
+    #derecha .subtitulo {
+        font-size: 20px;
+    }
+
+    #derecha .texto{
+        
+        width: 101%;
+        margin-right: 70px;
+        font-size: small;
+        
+    }
+
+    #derecha .rescate-crow{
+        padding: 6px;
+        margin-right: 40px;
+    }
+
+    #derecha img{
+        width: 300px;
+        
+        height: 180px;
+    }
+
+    #rs {
+        padding: 5px;
+        display:flex;
+        justify-content:space-around ;
+        margin-left: 180px;
+    }
+
+    
+   
+
+   
+
+    #derecha{
+        width: 90%;
+        text-align: left;
+        float: left;
+
+    }
+
+  }
+
+
+  @media all and (min-width:480px) and (max-width:600px){
+
+    #menu{
+        height: auto;
+        flex-direction: column;
+        
+
+    }
+
+    
+         
+
+    .container {
+            padding: 5px;
+            width: 95%;
+            margin: 40px 0 0 0;
+            
+    }
+
+    .container img{
+        width: max-content;
+        height: 120%;
+    }
+
+    
+
+    .slider-wrapper {
+        height: 240px;
+        
+    }
+
+    
+    .caption{
+        height: 40%;
+    }
+
+
+    .caption p{
+        width: 80%;
+        font-size: 15px;
+    }
+
+   
+
+
+    #menu a{
+        background-color:#6DCCAA ;
+        border-bottom: 1px solid lightgray;
+        border-top: 1px solid lightgray;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        line-height: 3em;
+
+    }
+
+
+    
+
+    #menu img{
+        position:center;
+        margin:10px;
+        
+      
+        
+    }
+
+   
+
+
+    #cuerpo {
+        flex-direction: column;
+        
+    }
+
+    
+     #numero{
+        display: none;
+     }
+
+     #descripcion_perris{
+        display: none;
+     }
+
+     #info{
+         height: 100px;
+     }
+
+   
+
+
+    #izquierda{
+
+        width: 96%;
+        margin-right: 60px;
+        padding: 10px;
+    }
+
+    #izquierda img{
+        width: 250px;
+        padding: 10px;
+        margin-left: 45%;
+        height: 150px;
+    }
+
+
+    #izquierda .subtitulo,.linea,.titulo{
+        margin-right: 10px;
+        font-size: 25px;
+    }
+
+
+    #izquierda .subtitulo {
+        font-size: 20px;
+    }
+
+    #izquierda .texto{
+        
+        width: 100%;
+        margin-right: 70px;
+        font-size: 15px;
+    }
+
+    #derecha .subtitulo,.linea,.titulo{
+        margin-right: 10px;
+        font-size: 25px;
+    }
+
+
+    #derecha .subtitulo {
+        font-size: 20px;
+    }
+
+    #derecha .texto{
+        
+        width: 101%;
+        margin-right: 70px;
+        font-size: small;
+        
+    }
+
+    #derecha .rescate-crow{
+        padding: 6px;
+        margin-right: 40px;
+    }
+
+    #derecha img{
+        width: 250px;
+        
+        height: 180px;
+    }
+
+    #rs {
+        padding: 5px;
+        display:flex;
+        justify-content:space-around ;
+        margin-left: 130px;
+    }
+
+    
+   
+
+   
+
+    #derecha{
+        width: 90%;
+        text-align: left;
+        float: left;
+
+    }
+
+
+
+  }
+
+
+  @media all and (min-width:200px) and (max-width:319px){
+
+    #menu{
+        height: auto;
+        flex-direction: column;
+        
+
+    }
+
+    
+         
+
+    .container {
+            padding: 5px;
+            width: 95%;
+            margin: 40px 0 0 0;
+            
+    }
+
+    .container img{
+        width: max-content;
+        height: 120%;
+    }
+
+    
+
+    .slider-wrapper {
+        height: 240px;
+        
+    }
+
+    
+    .caption{
+        height: 40%;
+    }
+
+
+    .caption p{
+        width: 80%;
+        font-size: 15px;
+    }
+
+   
+
+
+    #menu a{
+        background-color:#6DCCAA ;
+        border-bottom: 1px solid lightgray;
+        border-top: 1px solid lightgray;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        line-height: 3em;
+
+    }
+
+
+    
+
+    #menu img{
+        position:center;
+        margin:10px;
+        width: 80%;
+        
+      
+        
+    }
+
+   
+
+
+    #cuerpo {
+        flex-direction: column;
+        
+    }
+
+    
+     #numero{
+        display: none;
+     }
+
+     #descripcion_perris{
+        display: none;
+     }
+
+     #info{
+         height: 100px;
+     }
+
+   
+
+
+    #izquierda{
+
+        width: 96%;
+        margin-right: 60px;
+        padding: 10px;
+    }
+
+    #izquierda img{
+        width: 170px;
+        padding: 10px;
+        margin-left: 37%;
+        height: 120px;
+    }
+
+
+    #izquierda .subtitulo,.linea,.titulo{
+        margin-right: 10px;
+        font-size: 23px;
+    }
+
+
+    #izquierda .subtitulo {
+        font-size: 17px;
+    }
+
+    #izquierda .texto{
+        
+        width: 100%;
+        margin-right: 70px;
+        font-size: small;
+    }
+
+    #derecha .subtitulo,.linea,.titulo{
+        margin-right: 10px;
+        font-size: 23px;
+    }
+
+
+    #derecha .subtitulo {
+        font-size: 17px;
+    }
+
+    #derecha .texto{
+        
+        width: 100%;
+        margin-right: 70px;
+        font-size: small;
+       
+    }
+
+    #derecha .rescate-crow{
+        padding: 6px;
+        margin-right: 10px;
+    }
+
+    #derecha img{
+        width: 170px;
+        
+        height: 150px;
+    }
+
+
+    #derecha .rescate-crow{
+        margin-right: 400px;
+    }
+
+    #rs {
+        padding: 5px;
+        display:flex;
+        justify-content:space-around ;
+        margin-left: 86px;
+    }
+
+    
+   
+
+   
+
+    #derecha{
+        width: 90%;
+        text-align: left;
+        float: left;
+
+    }
+
+  }
+
+
+  @media all and (min-width:320px) and (max-width:499px){
+
+
+    #menu{
+        height: auto;
+        flex-direction: column;
+        
+
+    }
+
+    
+         
+
+    .container {
+            padding: 5px;
+            width: 95%;
+            margin: 40px 0 0 0;
+            
+    }
+
+    .container img{
+        width: max-content;
+        height: 120%;
+    }
+
+    
+
+    .slider-wrapper {
+        height: 240px;
+        
+    }
+
+    
+    .caption{
+        height: 40%;
+    }
+
+
+    .caption p{
+        width: 80%;
+        font-size: 15px;
+    }
+
+   
+
+
+    #menu a{
+        background-color:#6DCCAA ;
+        border-bottom: 1px solid lightgray;
+        border-top: 1px solid lightgray;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        line-height: 3em;
+
+    }
+
+
+    
+
+    #menu img{
+        position:center;
+        margin:10px;
+        
+      
+        
+    }
+
+   
+
+
+    #cuerpo {
+        flex-direction: column;
+        
+    }
+
+    
+     #numero{
+        display: none;
+     }
+
+     #descripcion_perris{
+        display: none;
+     }
+
+     #info{
+         height: 100px;
+     }
+
+   
+
+
+    #izquierda{
+
+        width: 96%;
+        margin-right: 60px;
+        padding: 10px;
+    }
+
+    #izquierda img{
+        width: 210px;
+        padding: 10px;
+        margin-left: 37%;
+        height: 130px;
+    }
+
+
+    #izquierda .subtitulo,.linea,.titulo{
+        margin-right: 10px;
+        font-size: 25px;
+    }
+
+
+    #izquierda .subtitulo {
+        font-size: 20px;
+    }
+
+    #izquierda .texto{
+        
+        width: 100%;
+        margin-right: 70px;
+        font-size: small;
+    }
+
+    #derecha .subtitulo,.linea,.titulo{
+        margin-right: 10px;
+        font-size: 23px;
+    }
+
+
+    #derecha .subtitulo {
+        font-size: 17px;
+    }
+
+    #derecha .texto{
+        
+        width: 80%;
+        margin-right: 70px;
+        font-size: small;
+       
+    }
+
+    #derecha .rescate-crow{
+        padding: 6px;
+        margin-right: 40px;
+    }
+
+    #derecha img{
+        width: 200px;
+        
+        height: 180px;
+    }
+
+
+    #derecha .rescate-crow{
+        margin-right: 400px;
+    }
+
+    #rs {
+        padding: 5px;
+        display:flex;
+        justify-content:space-around ;
+        margin-left: 130px;
+    }
+
+    
+   
+
+   
+
+    #derecha{
+        width: 90%;
+        text-align: left;
+        float: left;
+
+    }
+
+
+    
+
+}
+  
+
+@media all and (min-width:901px) and (max-width:1200px){
+    #menu{
+        height: auto;
+        flex-direction: column;
+        
+
+    }
+
+    
+    .container {
+        padding: 5px;
+        width: 60%;
+        height: 300px;
+       margin-left: 200px;
+        
+}
+
+.container img{
+    width: max-content;
+    height: 120%;
+}
+
+
+
+.slider-wrapper {
+    height: 240px;
+}
+
+
+.caption{
+    height: 40%;
+}
+
+
+.caption p{
+    width: 90%;
+    font-size: 15px;
+}
+
+
+
+
+#menu a{
+    background-color:#6DCCAA ;
+    border-bottom: 1px solid lightgray;
+    border-top: 1px solid lightgray;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    line-height: 3em;
+
+}
+
+
+
+
+#menu img{
+    position:center;
+    margin:10px;
+    
+  
+    
+}
+
+}
+
+@media all and (min-width:730px) and (max-width:900px){
+    #menu{
+        height: auto;
+        flex-direction: column;
+        
+
+    }
+
+    
+         
+
+    .container {
+            padding: 5px;
+            width: 95%;
+            margin: 40px 0 0 0;
+            
+    }
+
+    .container img{
+        width: max-content;
+        height: 120%;
+    }
+
+    
+
+    .slider-wrapper {
+        height: 240px;
+    }
+
+    
+    .caption{
+        height: 40%;
+    }
+
+
+    .caption p{
+        width: 90%;
+        font-size: 15px;
+    }
+
+   
+
+
+    #menu a{
+        background-color:#6DCCAA ;
+        border-bottom: 1px solid lightgray;
+        border-top: 1px solid lightgray;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        line-height: 3em;
+
+    }
+
+
+    
+
+    #menu img{
+        position:center;
+        margin:10px;
+        
+      
+        
+    }
+
+    #perro img{
+       width: 90% !important;
+    }
+
+
+    #cuerpo {
+        flex-direction: column;
+        
+    }
+
+    
+     #numero{
+        display: none;
+     }
+
+     #descripcion_perris{
+        display: none;
+     }
+
+     #info{
+         height: 100px;
+     }
+
+   
+
+
+    #izquierda{
+
+        width: 96%;
+        text-align: left;
+        float: left;
+        padding: 10px;
+    }
+
+
+    #izquierda .texto{
+        font-size: 100%;
+        width: 100%;
+    }
+
+    #derecha .texto{
+        font-size: 100%;
+        width: 100%;
+    }
+
+    #izquierda .rescate-crow{
+        padding: 6px;
+        float: right;
+    }
+
+    #rs {
+        padding: 5px;
+        display:flex;
+        justify-content:space-around ;
+        margin-left: 250px;
+    }
+
+    
+   
+
+   
+
+    #derecha{
+        width: 96%;
+        text-align: left;
+        float: left;
+
+    }
+
+
+    
+
+}
+
+footer p{
+    line-height: 2em;
+    margin-left: 20px;
+    height: 80px;
+}
+
+
+
+/*formulario contacto*/
+.holder {
+    width:100%;
+    height:400px;
+    text-align:center;
+    margin-top:50px;
+    font-size:200%;
+  }
+  
+  form {
+    font-family: 'Titillium Web', sans-serif !important;
+  }
+  
+  #contactform {
+    display:none;
+    position:fixed;
+    margin:0;  padding:0;
+    left:0; top:0;
+    height:100%;
+    width:100%;
+    background:rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-form {
+    top:50px;
+  }
+  
+  .center {
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  /*float*/
+  .pull-left { float: left; }
+  .pull-right { float: left; }
+  
+  
+  .txt-center { text-align: center; }
+  
+  
+  button,
+  input,
+  select,
+  textarea {
+      font-size: 100%; 
+      margin: 0;
+      vertical-align: baseline; 
+  }
+  
+  button::-moz-focus-inner,
+  input::-moz-focus-inner { 
+      border: 0;
+      padding: 0;
+  }
+  
+  textarea {
+      overflow: auto; 
+      padding-left: 3px;
+      vertical-align: top; 
+  }
+  
+  #contact-form {
+      background-color: #FFF;
+  }
+  
+  #contact-form ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  }
+  
+  #contact-form li {
+      position: relative; 
+  }
+  
+  input:required,
+  input:invalid,
+  input:valid,
+  textarea:required,
+  textarea:invalid,
+  textarea:valid {
+      box-shadow:none !important;
+  }
+  
+  input, 
+  textarea {
+      display: block; 
+      border: 0;
+      background-color: transparent;
+      margin-top: 15px;
+      margin-bottom: 15px;
+  }
+  
+  ::-webkit-input-placeholder,
+  :-moz-placeholder,
+  ::-moz-placeholder,
+  :-ms-input-placeholder {  
+      color: #FFF;
+      opacity: .2 !important;
+  }
+  
+  label {
+      display: inline-block;
+      position: absolute; 
+      margin-top: -64px;
+      font-size: 1em;
+      font-weight: bold;
+      color: #333;
+      opacity: .5;
+      opacity: 1;
+      -webkit-transition: transform  100ms ease-out,
+                          opacity    300ms ease-in-out,
+                          color      200ms ease-out, 
+                          margin     200ms ease-out;
+              transition: transform  100ms ease-out,
+                          opacity    300ms ease-in-out,
+                          color      200ms ease-out, 
+                          margin     200ms ease-out;
+  }
+  
+  .modal{
+	display: none;
+	position: fixed;
+	z-index:1;
+	overflow: auto;
+	left: 0;
+	top:0;
+	width: 100%;
+	height:100%;
+	background: rgba(0, 0, 0, 0.452);
+}
+
+.contenido-modal{
+	position: relative;
+	background-color: #fefefe;
+	margin: auto;
+	width: 30%;
+	box-shadow: 0 0 6px 0 rgba(0, 0, 0, .4);
+	animation-name: modal;
+	animation-duration: 1s;
+}
+@keyframes modal{
+	from{top:-330px; opacity:0;}
+	to{top:0; opacity:1;}
+}
+.close{
+	color: #f2f2f2;
+	font-size:30px;
+	font-weight: bold;
+}
+.close:hover{
+	color:#7f8c8d;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-header, .footer{
+	padding: 8px 16px;
+	background: #34495e;
+	color:#f2f2f2;
+}
+
+p{
+	text-align: justify;
+}
+
+.modal-body{
+	padding: 20px 16px;
+}
+
+
+
+
+  
+  @media (min-width: 0px) and (max-width: 767px) {
+      h1 {
+          font-size: 1.75em;
+      }
+  
+      label {
+          font-size: .9em;
+      }
+  
+      #contact-form {
+          position: relative;
+          width: 300px;
+          margin: 15px auto;
+          padding: 45px 20px 30px;
+          background-color: #FFF;
+      }
+  
+      .required {
+          margin-top: -24px;
+          margin-left: 76%;
+      }
+  
+      textarea:focus ~ .required,
+      textarea:not(:focus) ~ .required {
+          margin-top: -24px;
+      }
+  
+      textarea:focus ~ .required { opacity: 1; }
+      textarea:not(:focus) ~ .required { opacity: 0; }
+  }
+
+
+
+

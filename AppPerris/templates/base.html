@@ -1,0 +1,92 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>MisPerris-Adopcion de Mascotas</title>
+</head>
+
+<body>
+    
+    <header >
+        <div id="menu">
+            <img src="static/img/logo.png" alt="logo mis perris">
+            <a href="#">inicio</a>
+            <a href="#">Quienes somos</a>
+            <a href="rescatados.html">Adopción</a>
+            <a href="contacto.html" >contactanos</a>
+        </div>
+        <section id="slider" class="container">
+            <ul class="slider-wrapper">
+            <li class="current-slide">
+                <img src="static/img/adoptados/Apolo.jpg" title="" alt="">
+    
+                <div class="caption">
+                    <h2 class="slider-title">Apolo</h2>
+                    <p>Apolo desde el primer día trajo felicidad y alegría a nuestras vidas.</p>
+                </div>
+            </li>
+    
+            <li>
+                <img src="static/img/adoptados/Duque.jpg" title="" alt="">
+    
+                <div class="caption">
+                    <h2 class="slider-title">Duque</h2>
+                    <p>Duque es el compañero que necesitaba para mis aventuras.</p>
+                </div>
+            </li>
+    
+            <li>
+                <img src="static/img/adoptados/Tom.jpg" title="" alt="">
+    
+                <div class="caption">
+                    <h2 class="slider-title">Tom</h2>
+                    <p>tom llego para quedarse, es mi fiel amigo y lo quiero un montón.</p>
+                </div>
+            </li>
+    
+           
+            </ul>
+            <!-- Sombras -->
+            <div class="slider-shadow"></div>
+            
+            <!-- Controles de Navegacion -->
+            <ul id="control-buttons" class="control-buttons"></ul>
+        </section>
+
+        <div id="info">
+            <div id="numero">+5698765431</div>
+            <div id="descripcion_perris">Rescate y adopción de perros callejeros</div>
+            <div id=rs>
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-google-plus"></a>
+              <a href="#" class="fa fa-instagram"></a>
+              <a href="#" class="fa fa-envelope"></a>
+            </div>
+        </div>
+    </header>
+   {% block content %}
+   {% endblock%}
+
+    <footer>
+        <p>Desarrollo web y mobile.</p>
+    </footer>
+
+</body>
+
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script src="static/js/script.js"></script>
+
+
+
+
+</html>
