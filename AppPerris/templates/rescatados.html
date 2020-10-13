@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'css/rescatados.css'%}">
+  <link rel="stylesheet" href="static/css/rescatados.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -38,9 +38,10 @@
        <a onclick="play()" style=" margin-left: 630px; margin-top: 95px; font-size: 65px; color: white; position: absolute; top: 20px;" href="#" class="fa fa-paw"></a>
   </section>
 
-    
+   
 <section id="tarjetas">
-    {% for row in lista %}
+  {% for row in lista %}
+
     <div class="container">
         <div class="container-cards">
             <div class="container-cards-surface container-cards-front">
