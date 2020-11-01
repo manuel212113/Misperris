@@ -1,0 +1,80 @@
+
+
+
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../static/css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Usuario</title>
+</head>
+<body style="background: url('https://image.freepik.com/free-vector/cute-cartoon-dog-faces-with-bones-seamless-pattern-wallpaper_40564-77.jpg');  ">
+  <form method="POST" >
+    {% csrf_token %}
+    <div class="cont">
+        <div class="form sign-in style margin-top -50px">
+          <h2 id="labelForm" style="margin-top: -50px;">Registro de usuario</h2>
+          <label>
+            <span>Nombre de Usuario</span>
+            {{form.username}}
+          </label>
+          <label>
+            <span>Correo</span>
+            {{form.email}}
+          </label>
+          <label>
+            <span> Contraseña</span>
+            {{form.password1}}
+          </label>
+          <label>
+            <span>Confirmar Contraseña</span>
+            {{form.password2}}
+          </label>
+          <a href="login" class="linkLogin" > <p class="forgot-pass" >Ya posee una cuenta?, Inicia Sesion</p></a>
+          <input id="btn-ingresar" type="submit" value="Registarse" style="margin-top: 1px; width: 200px;" ></button>
+          <button type="button" class="fb-btn" style=" width: 170px; height: 50px; margin-left: 200px; margin-top: 5px; border-radius: 5px;">Registarte con <span>facebook</span></button>
+        </div>
+        <div class="sub-cont">
+          <div class="img">
+            <div class="img__text m--up">
+              <h2>Ya tienes una cuenta?</h2>
+              <p>Inicia sesion en el portal!</p>
+            </div>
+            <div class="img__text m--in">
+              
+            </div>
+            <a href="login"><div class="img__btn" style="width:200px;">
+              <span class="m--up" >Iniciar Sesion</span>
+              <span style="margin-top: 30px;" class="m--in">Iniciar Sesion</span>
+            </div>
+          </div>
+       
+        </div>
+      </div>
+      {% if form.errors %}
+      <script>
+
+   swal("Error al Registrarse", "Rellena bien el formulario!", "error"); // aqui esta la alerta  en caso que de error 
+      </script>
+
+{% elif form.is_valid %}
+<script>
+
+      swal("Registrado", "Usuario Registrado Correctamente!", "success"); // aqui esta la alerta  en caso que de error 
+    </script>
+
+     {% endif %}
+    </form>
+   
+    
+</body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</html>

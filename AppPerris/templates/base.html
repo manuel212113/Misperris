@@ -24,6 +24,12 @@
             <a href="#">Quienes somos</a>
             <a href="rescatados.html">Adopción</a>
             <a href="contacto.html" >contactanos</a>
+            {% if user.is_authenticated %}
+            <a href="/logout" >Cerrar Sesion</a>
+            {% else %}
+            <a href="login" style="border: 5px solid black; border-radius: 5px;">Ingresar</a>
+            {% endif %}
+
         </div>
         <section id="slider" class="container">
             <ul class="slider-wrapper">

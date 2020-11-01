@@ -1,0 +1,83 @@
+
+
+
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../static/css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+  <form method="POST" >
+    {% csrf_token %}
+
+    <div class="cont">
+        <div class="form sign-in">
+          <h2 id="txtBievenido">Bievenido al Portal de Mis Perris</h2>
+          <label>
+            <span>Nombre Usuario</span>
+            <input type="text" name="username" id="username" minlength="5" required />
+          </label>
+          <label>
+            <span>Password</span>
+            <input type="password" name="password" id="password" required />
+          </label>
+          <a href="/reset"> <p class="forgot-pass">Olvidaste la Contraseña?</p></a>
+          <input id="btn-ingresar" type="submit" value="Ingresar" style="padding: 5px 5px 5px 5px;" ></button>
+          <button type="button" class="fb-btn"  style="width: 170px; height: 50px; margin-left: 200px; margin-top: 5px; border-radius: 5px;">Ingresar con <span>facebook</span></button>
+        </div>
+        <div class="sub-cont">
+          <div class="img">
+            <div class="img__text m--up">
+              <h2>Aun no tienes una cuenta?</h2>
+              <p>Registrate y adopta un tierno perrito!</p>
+            </div>
+            <div class="img__text m--in">
+              
+            </div>
+            <a href="registro"><div class="img__btn" style="width:150px;">
+              <span class="m--up" >Registrarte</span>
+              <span style="margin-top: 30px;" class="m--in">Iniciar Sesion</span>
+            </div>
+          </a>
+          </div>
+          <div class="form sign-up">
+            <h2>Time to feel like home,</h2>
+            <label>
+              <span>Name</span>
+              <input type="text" />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" />
+            </label>
+            <label>
+              <span>Password</span>
+              <input type="password" />
+            </label>
+            <button type="button" class="submit">Sign Up</button>
+            <button type="button" class="fb-btn">Join with <span>Facebook</span></button>
+          </div>
+        </div>
+      </div>
+      {% if form.errors %}
+      <script>
+
+   swal("Error", "Usuario o Contraseña incorrecta!", "error"); // aqui esta la alerta  en caso que de error 
+      </script>
+     {% endif %}
+    </form>
+     
+    
+</body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</html>
