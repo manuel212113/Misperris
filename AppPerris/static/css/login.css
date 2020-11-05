@@ -168,6 +168,35 @@ input {
 .cont.s--signup .img__btn span.m--up {
   transform: translateY(72px);
 }
+
+.fa {
+  padding: 20px;
+  font-size: 100px;
+  width: 80px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+
+#txtRedesSocial{
+  color: teal; 
+  font-size: medium;
+  margin-left: 150px;
+  
+}
+
+.fa-google-plus {
+  background: white;
+  color: #3DD8AD;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-left: 60px;
+  margin-bottom: 50px;
+  font-size: 200px;
+}
+
 h2 {
   width: 100%;
   font-size: 26px;
@@ -294,6 +323,14 @@ input {
       
 
   }
+
+  #txtRedesSocial{
+
+  font-size: 16px; 
+  margin-left: 100px;
+  margin-top: 20px;
+  }
+  
 
 
   #txtBievenido{

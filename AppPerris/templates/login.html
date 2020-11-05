@@ -3,6 +3,8 @@
 
 
 {% load static %}
+{% load socialaccount %}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
@@ -32,7 +36,9 @@
           </label>
           <a href="/reset"> <p class="forgot-pass">Olvidaste la Contraseña?</p></a>
           <input id="btn-ingresar" type="submit" value="Ingresar" style="padding: 5px 5px 5px 5px;" ></button>
-          <button type="button" class="fb-btn"  style="width: 170px; height: 50px; margin-left: 200px; margin-top: 5px; border-radius: 5px;">Ingresar con <span>facebook</span></button>
+          <label id="txtRedesSocial" >Ingresar con </label>
+          <a href="{% provider_login_url "google" %}" class="fa fa-google-plus fa-2x"  ></a>
+        
         </div>
         <div class="sub-cont">
           <div class="img">
