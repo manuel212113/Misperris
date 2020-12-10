@@ -41,9 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'AppPerris',
-      ##certificado ssl para login de facebook
-    "sslserver",
-
+    'pwa',
+     
+  # libreria para logearse con distintas plataformas(google,twitter,discord)
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -168,4 +168,4 @@ AUTHENTICATION_BACKENDS = [
 SITE_ID=1
 
 
-
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'serviceworker.js')

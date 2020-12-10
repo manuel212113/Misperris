@@ -20,6 +20,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('AppPerris.urls')),
     path('accounts/', include('allauth.urls')),
+    path('', include('pwa.urls')),
+
 
     
 ]

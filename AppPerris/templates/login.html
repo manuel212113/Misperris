@@ -4,11 +4,14 @@
 
 {% load static %}
 {% load socialaccount %}
+{% load pwa%}
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {% progressive_web_app_meta %}
+
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../../static/css/login.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
