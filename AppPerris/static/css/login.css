@@ -182,8 +182,8 @@ input {
 #txtRedesSocial{
   color: teal; 
   font-size: medium;
-  margin-left: 150px;
-  
+  margin-left: 220px;
+  margin-top: 20px;
 }
 
 .fa-google-plus {
@@ -192,8 +192,8 @@ input {
   border-radius: 50%;
   height: 100px;
   width: 100px;
-  margin-left: 60px;
-  margin-bottom: 50px;
+  margin-left: 200px;
+  margin-top: 10px;
   font-size: 200px;
 }
 
@@ -327,8 +327,12 @@ input {
   #txtRedesSocial{
 
   font-size: 16px; 
-  margin-left: 100px;
+  margin-left: 120px;
   margin-top: 20px;
+  }
+
+  .fa-google-plus{
+    margin-left: 100px;
   }
   
 
